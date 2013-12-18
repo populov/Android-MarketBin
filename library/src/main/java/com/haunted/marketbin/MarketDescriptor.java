@@ -1,11 +1,16 @@
 package com.haunted.marketbin;
 
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+
 public class MarketDescriptor implements IMarketDescriptor {
     private final String marketName;
     private final String intentFormat;
     private final String packageName;
 
-    public MarketDescriptor(String marketName, String intentFormat, String packageName) {
+    public MarketDescriptor(@NotNull String marketName,
+                            @Nullable String intentFormat,
+                            @Nullable String packageName) {
         this.marketName = marketName;
         this.intentFormat = intentFormat;
         this.packageName = packageName;

@@ -19,7 +19,7 @@ public class MarketLocator {
         packageManager = context.getPackageManager();
     }
 
-    private boolean isAppInstalled(String packageName) {
+    public boolean isAppInstalled(String packageName) {
         if (packages == null) {
             if (packageManager == null)
                 throw new NullPointerException("Can't get PackageManager");

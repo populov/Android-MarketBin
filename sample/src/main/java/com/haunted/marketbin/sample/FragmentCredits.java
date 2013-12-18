@@ -32,7 +32,7 @@ public class FragmentCredits extends Fragment implements View.OnClickListener {
         MarketLocator locator = new MarketLocator(getActivity());
 
         String officeBuzz = getString(R.string.office_buzz);
-        IMarketDescriptor[] officeBuzzPublishedIn = new IMarketDescriptor[] {
+        IMarketDescriptor[] officeBuzzPublishedIn = {
                 new AppDescriptor(MarketBin.getGooglePlay(), officeBuzz),
                 new AppDescriptor(MarketBin.getSamsungApps(), officeBuzz),
                 new AppDescriptor(MarketBin.getSlideMe(), officeBuzz),
@@ -42,7 +42,7 @@ public class FragmentCredits extends Fragment implements View.OnClickListener {
         MarketUI.bindAppLink(tvOfficeBuzz, market, "com.haunted.office.buzz");
 
         String tkShrink = getString(R.string.tk_shrink);
-        IMarketDescriptor[] tkShrinkPublishedIn = new IMarketDescriptor[] {
+        IMarketDescriptor[] tkShrinkPublishedIn = {
                 new AppDescriptor(MarketBin.getGooglePlay(), tkShrink),
                 new AppDescriptor(MarketBin.getGooglePlayWeb(), tkShrink)
         };
