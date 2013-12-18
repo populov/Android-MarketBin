@@ -15,7 +15,7 @@ public class PackageDialogFragment extends DialogFragment {
         editPackageName.setSingleLine();
 
         return new AlertDialog.Builder(getActivity())
-                .setTitle("Test Package")
+                .setTitle(getString(R.string.test_package))
                 .setView(editPackageName)
                 .setNegativeButton(android.R.string.cancel, null)
                 .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {

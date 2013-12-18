@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="title_section1">Один</string>
+    <string name="title_section2">Несколько</string>
+    <string name="title_section3">Ещё</string>
+    <string name="action_settings">Настройки</string>
+    <string name="show_in">Открыть в </string>
+    <string name="link_to">Ссылка на </string>
+    <string name="donate_hint">Вы можете подарить мне несколько виртуальных монеток, если вам нравится библиотека MarketBin, а тем более, если она помогает вам зарабатывать реальные деньги :)</string>
+    <string name="tk_shrink">TK Shrink</string>
+    <string name="office_buzz">Офисный будильник</string>
+    <string name="other_apps">Посмотрите мои приложения</string>
+    <string name="bitcoin_address">17g6FWQh8iF8C2MAQhoyYAvxtpYXdMbfbd</string>
+    <string name="litecoin_address">Lcz35NNdPap6X8GVgudVP9nwWxbYMvRgpi</string>
+    <string name="donate">Поддержать</string>
+    <string name="copy_address">Скопировать адрес</string>
+    <string name="copied_to_clipboard">Скопировано в буфер обмена: %s</string>
+    <string name="available_markets">Доступные магазины</string>
+    <string name="None">Нет</string>
+    <string name="not_found">Проверены, но не найдены</string>
+    <string name="test_package">Тестовое приложение</string>
+
+</resources>
