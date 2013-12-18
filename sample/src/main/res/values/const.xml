@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="demo_app_id">com.haunted.office.buzz</string>
+    <string name="bitcoin_address">17g6FWQh8iF8C2MAQhoyYAvxtpYXdMbfbd</string>
+    <string name="litecoin_address">Lcz35NNdPap6X8GVgudVP9nwWxbYMvRgpi</string>
+</resources>

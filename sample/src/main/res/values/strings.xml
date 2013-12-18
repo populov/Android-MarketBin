@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="demo_app_id">com.haunted.office.buzz</string>
     <string name="app_name">MarketBin</string>
     <string name="title_section1">Single</string>
     <string name="title_section2">Multiple</string>
@@ -13,8 +12,6 @@
     <string name="tk_shrink">TK Shrink</string>
     <string name="office_buzz">Office Buzz</string>
     <string name="other_apps">Check out some of my apps</string>
-    <string name="bitcoin_address">17g6FWQh8iF8C2MAQhoyYAvxtpYXdMbfbd</string>
-    <string name="litecoin_address">Lcz35NNdPap6X8GVgudVP9nwWxbYMvRgpi</string>
     <string name="donate">Donate</string>
     <string name="copy_address">Copy address</string>
     <string name="copied_to_clipboard">Copied to clipboard: %s</string>

@@ -11,8 +11,6 @@
     <string name="tk_shrink">TK Shrink</string>
     <string name="office_buzz">Офисный будильник</string>
     <string name="other_apps">Посмотрите мои приложения</string>
-    <string name="bitcoin_address">17g6FWQh8iF8C2MAQhoyYAvxtpYXdMbfbd</string>
-    <string name="litecoin_address">Lcz35NNdPap6X8GVgudVP9nwWxbYMvRgpi</string>
     <string name="donate">Поддержать</string>
     <string name="copy_address">Скопировать адрес</string>
     <string name="copied_to_clipboard">Скопировано в буфер обмена: %s</string>
