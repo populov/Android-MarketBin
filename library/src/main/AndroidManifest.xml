@@ -1,0 +1,9 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.haunted.marketbin">
+
+    <uses-sdk android:minSdkVersion="7" android:targetSdkVersion="19" />
+
+    <application android:label="MarketBin" android:allowBackup="false" >
+    </application>
+
+</manifest>

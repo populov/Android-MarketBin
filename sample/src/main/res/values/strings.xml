@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="demo_app_id">com.haunted.office.buzz</string>
+    <string name="app_name">MarketBin</string>
+    <string name="title_section1">Single</string>
+    <string name="title_section2">Multiple</string>
+    <string name="title_section3">Credits</string>
+    <string name="action_settings">Settings</string>
+    <string name="show_in">Show in </string>
+    <string name="link_to">Link to</string>
+    <string name="donate_hint">Or you can just donate me some virtual coins, if you like MarketBin library and especially if it helps you earn real money :)</string>
+    <string name="tk_shrink">TK Shrink</string>
+    <string name="office_buzz">Office Buzz</string>
+    <string name="other_apps">Check out some of my apps</string>
+    <string name="bitcoin_address">17g6FWQh8iF8C2MAQhoyYAvxtpYXdMbfbd</string>
+    <string name="litecoin_address">Lcz35NNdPap6X8GVgudVP9nwWxbYMvRgpi</string>
+    <string name="donate">Donate</string>
+    <string name="copy_address">Copy address</string>
+    <string name="copied_to_clipboard">Copied to clipboard: %s</string>
+    <string name="available_markets">Available Markets</string>
+    <string name="None">None</string>
+    <string name="not_found">Checked, but not found</string>
+
+</resources>

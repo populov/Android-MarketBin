@@ -1,0 +1,75 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:0.6.+'
+    }
+}
+
+apply plugin: 'android-library'
+
+repositories {
+    mavenCentral()
+}
+
+android {
+    compileSdkVersion 19
+    buildToolsVersion "19.0.0"
+
+    defaultConfig {
+        minSdkVersion 7
+        targetSdkVersion 19
+        versionCode 1
+        versionName version
+    }
+    release {
+        runProguard false
+        proguardFile 'proguard-rules.txt'
+        proguardFile getDefaultProguardFile('proguard-android.txt')
+    }
+}
+
+dependencies {
+    compile 'com.intellij:annotations:+@jar'
+}
+
+apply plugin: 'maven'
+
+// Publish to maven local repository
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository(url: "file://$buildDir/mvnRepo/")
+            pom.project {
+                name 'MarketBin'
+                packaging 'jar'
+                description 'Paging indicator widgets compatible with the ViewPager from the Android Support Library and ActionBarSherlock.'
+                url 'http://github.com/Haunted-Soft/MarketBin'
+
+                scm {
+                    url 'git@github.com:Haunted-Soft/MarketBin.git'
+                    connection 'git@github.com:Haunted-Soft/MarketBin.git'
+                    developerConnection 'git@github.com:Haunted-Soft/MarketBin.git'
+                }
+
+                licenses {
+                    license {
+                        name 'The Apache Software License, Version 2.0'
+                        url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                        distribution 'repo'
+                    }
+                }
+
+                developers {
+                    developer {
+                        id 'Populov'
+                        name 'Serge Populov'
+                        email 'serge@populov.com'
+                    }
+                }
+            }
+        }
+    }
+}
+
