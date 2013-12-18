@@ -6,7 +6,7 @@ Examples
 --------
 Handle "Show In Market" click
 ```java
-MarketLocator locator = new MarketLocator(getActivity());
+MarketLocator locator = new MarketLocator(context);
 IMarketDescriptor market = locator.findFirst(MarketBin.getAllKnown());
 MarketUI.showAppInMarket(getActivity(), market, "com.haunted.office.buzz");
 ```
@@ -16,7 +16,7 @@ MarketUI.bindAppLink(textView, market, "com.haunted.office.buzz");
 ```
 Get list of Android app store clients installed on device
 ```java
-MarketLocator locator = new MarketLocator(getActivity());
+MarketLocator locator = new MarketLocator(context);
 List<IMarketDescriptor> availableMarkets = locator.findAll(MarketBin.getAllKnown();, true, true);
 ```
 **Note:** MarketBin doesn't check if your app is available in those stores, only checks if they are available on your device. So, if you want to check that a subset of certain markets (where your app is published) is installed on user's device, you can make your own list for verification. The order in this list is significant for search sequence. So it's recommended to place most desirable items in the beginning of list and vice versa. Also I recommend to place at the end of list a "fallback" item, that shows a google play website in browser, if no available markets detected. 
@@ -39,7 +39,7 @@ Odd use
 -------
 Market locator can be used to check whether some application is installd or some URI scheme handler is present. So, you can, for example, easily check if user has Bitcoin wallet installed and make clicable links for Bitcoin addresses.
 ```java
-MarketLocator locator = new MarketLocator(getActivity());
+MarketLocator locator = new MarketLocator(context);
 IMarketDescriptor donation = new MarketDescriptor("Bitcoin Donation", "bitcoin:%s", null);
 boolean bitcoinProtocolHandlerFound = locator.findByIntent(Arrays.asList(donation)) != null;
 if (bitcoinProtocolHandlerFound)
@@ -86,6 +86,7 @@ If you want to have latest version, that has not been published yet, or build fr
     }
     ```
 Now add project dependency as usual (see above).
+
 Donations
 =========
 You can donate me some virtual coins, if you like MarketBin library and especially if it helps you earn real money :)
