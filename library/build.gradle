@@ -42,6 +42,7 @@ uploadArchives {
         mavenDeployer {
             repository(url: "file://$buildDir/mvnRepo/")
             pom.project {
+                artifactId 'MarketBin'
                 name 'MarketBin'
                 packaging 'jar'
                 description 'Paging indicator widgets compatible with the ViewPager from the Android Support Library and ActionBarSherlock.'
@@ -55,8 +56,8 @@ uploadArchives {
 
                 licenses {
                     license {
-                        name 'The Apache Software License, Version 2.0'
-                        url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                        name 'The MIT License (MIT)'
+                        url 'http://opensource.org/licenses/MIT'
                         distribution 'repo'
                     }
                 }
