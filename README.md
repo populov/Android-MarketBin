@@ -27,13 +27,13 @@ List<IMarketDescriptor> availableMarkets = locator.findAll(MarketBin.getAllKnown
 **Note:** MarketBin doesn't check if your app is available in those stores, only checks if store clients are available on your device. So, if you want to check that a subset of certain markets (where your app is published) is installed on user's device, you can make your own list for verification. The order in this list is significant for search sequence. So it's recommended to place most desirable items in the beginning of list and vice versa. Also I recommend to place at the end of list a "fallback" item, that shows a google play (for example) website in browser, if no available markets detected.
 
 ```java
-IMarketDescriptor[] officeBuzzPublishedIn = {
+IMarketDescriptor[] myAppPublishedIn = {
     MarketBin.getGooglePlay(),
     MarketBin.getSamsungApps(),
     MarketBin.getSlideMe(),
     MarketBin.getGooglePlayWeb()
 };
-IMarketDescriptor market = locator.findFirst(Arrays.asList(officeBuzzPublishedIn));
+IMarketDescriptor market = locator.findFirst(Arrays.asList(myAppPublishedIn));
 ```
 Dynamic extending
 ------------
