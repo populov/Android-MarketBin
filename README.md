@@ -2,7 +2,7 @@ MarketBin
 =========
 Helps to detect which Android app stores are installed on device, and make links to your applications in those stores.
 
-You are welcome with pull requests to add new app stores to MarketBin.
+*You are welcome with pull requests* to add new app stores to **MarketBin**.
 
 Examples
 --------
@@ -22,7 +22,7 @@ Get list of Android app store clients installed on device
 
 ```java
 MarketLocator locator = new MarketLocator(context);
-List<IMarketDescriptor> availableMarkets = locator.findAll(MarketBin.getAllKnown();, true, true);
+List<IMarketDescriptor> availableMarkets = locator.findAll(MarketBin.getAllKnown(), true, true);
 ```
 **Note:** MarketBin doesn't check if your app is available in those stores, only checks if store clients are available on your device. So, if you want to check that a subset of certain markets (where your app is published) is installed on user's device, you can make your own list for verification. The order in this list is significant for search sequence. So it's recommended to place most desirable items in the beginning of list and vice versa. Also I recommend to place at the end of list a "fallback" item, that shows a google play (for example) website in browser, if no available markets detected.
 
@@ -80,7 +80,7 @@ If you want to have latest version, that has not been published yet, or build fr
 
 1. Download sources, build MarketBin project with gradle and execute **uploadArchives** task to publish library in local Maven repository.
 
-    ```
+    ```shell
     git clone git@github.com:Haunted-Soft/MarketBin.git
     cd MarketBin
     gradle build uploadArchives
@@ -97,7 +97,7 @@ If you want to have latest version, that has not been published yet, or build fr
 
 Donations
 =========
-You can donate me some virtual coins, if you like MarketBin library and especially if it helps you earn real money :)
+You can donate me some virtual coins, if you like **MarketBin** library and especially if it helps you earn real money :)
 
 Bitcoin: [17g6FWQh8iF8C2MAQhoyYAvxtpYXdMbfbd](bitcoin:17g6FWQh8iF8C2MAQhoyYAvxtpYXdMbfbd)
 
