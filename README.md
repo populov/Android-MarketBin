@@ -58,7 +58,7 @@ Use in Android Studio
 ### Online dependency ###
 The easyest way to use - you don't need to build project yourself, just add a few lines in your *gradle.config*.
 
-1. Add Haunted soft maven repository in project repositories section (*don't mix it up with buildscript repositories, that usually goes first*).
+1. Add Haunted Soft maven repository in project repositories section (*don't mix it up with buildscript repositories, that usually goes first*).
 
     ```groovy
     repositories {
