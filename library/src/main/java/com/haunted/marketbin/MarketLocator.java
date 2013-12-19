@@ -70,10 +70,22 @@ public class MarketLocator {
     public List<IMarketDescriptor> findAll(Iterable<? extends IMarketDescriptor> orderedMarketsList,
                                           boolean checkPackage, boolean checkIntent) {
         List<IMarketDescriptor> result = new ArrayList<IMarketDescriptor>();
-        for (IMarketDescriptor m: orderedMarketsList) {
-            if ((checkPackage && isAppInstalled(m.getPackageName()))
-                    || (checkIntent && isIntentAvailable(m.getIntentFormat())))
-                result.add(m);
+        List<String> schemesFound = new ArrayList<String>();
+        if (checkPackage) {
+            for (IMarketDescriptor m: orderedMarketsList)
+                if (isAppInstalled(m.getPackageName())) {
+                    result.add(m);
+                    schemesFound.add(m.getIntentFormat());
+                }
+        }
+        if (checkIntent) {
+            for (IMarketDescriptor m: orderedMarketsList) {
+                String scheme = m.getIntentFormat();
+                if (!result.contains(m) && !schemesFound.contains(scheme) && isIntentAvailable(scheme)) {
+                    result.add(m);
+                    schemesFound.add(scheme);
+                }
+            }
         }
         return result;
     }

@@ -18,6 +18,7 @@ public class MainActivity extends ActionBarActivity implements ActionBar.TabList
     public static String demoAppId;
 
     private ViewPager mViewPager;
+    private SectionsPagerAdapter mSectionsPagerAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +28,7 @@ public class MainActivity extends ActionBarActivity implements ActionBar.TabList
         final ActionBar actionBar = getSupportActionBar();
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 
-        SectionsPagerAdapter mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
+        mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
 
         mViewPager = (ViewPager) findViewById(R.id.pager);
         mViewPager.setAdapter(mSectionsPagerAdapter);
@@ -75,6 +76,11 @@ public class MainActivity extends ActionBarActivity implements ActionBar.TabList
 
     @Override
     public void onTabReselected(ActionBar.Tab tab, FragmentTransaction fragmentTransaction) {
+    }
+
+    public void refresh() {
+        Fragment fragment = mSectionsPagerAdapter.getItem(mViewPager.getCurrentItem());
+        fragment.onResume();
     }
 
     public class SectionsPagerAdapter extends FragmentPagerAdapter {

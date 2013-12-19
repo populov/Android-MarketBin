@@ -23,6 +23,7 @@ public class PackageDialogFragment extends DialogFragment {
                     public void onClick(DialogInterface dialog, int which) {
                         assert editPackageName.getText() != null;
                         MainActivity.demoAppId = editPackageName.getText().toString();
+                        ((MainActivity)getActivity()).refresh();
                     }
                 })
                 .show();

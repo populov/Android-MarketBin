@@ -36,6 +36,7 @@ public class FragmentCredits extends Fragment implements View.OnClickListener {
                 new AppDescriptor(MarketBin.getGooglePlay(), officeBuzz),
                 new AppDescriptor(MarketBin.getSamsungApps(), officeBuzz),
                 new AppDescriptor(MarketBin.getSlideMe(), officeBuzz),
+                new AppDescriptor(MarketBin.getYandexStore(), officeBuzz),
                 new AppDescriptor(MarketBin.getGooglePlayWeb(), officeBuzz)
         };
         IMarketDescriptor market = locator.findFirst(Arrays.asList(officeBuzzPublishedIn));

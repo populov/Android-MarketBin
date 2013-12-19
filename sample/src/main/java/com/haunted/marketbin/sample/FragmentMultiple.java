@@ -16,17 +16,24 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class FragmentMultiple extends Fragment {
+    private ViewGroup phAvailableMarkets;
+    private ViewGroup phUnavailableMarkets;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_multiple, container, false);
         assert v != null;
-        ViewGroup phAvailableMarkets = (ViewGroup) v.findViewById(R.id.phAvailableMarkets);
-        ViewGroup phUnavailableMarkets = (ViewGroup) v.findViewById(R.id.phUnavailableMarkets);
+        phAvailableMarkets = (ViewGroup) v.findViewById(R.id.phAvailableMarkets);
+        phUnavailableMarkets = (ViewGroup) v.findViewById(R.id.phUnavailableMarkets);
+        return v;
+    }
 
-        ArrayList<? extends IMarketDescriptor> markets = MarketBin.getAllKnown();
+    @Override
+    public void onResume() {
+        super.onResume();
         MarketLocator locator = new MarketLocator(getActivity());
+        ArrayList<? extends IMarketDescriptor> markets = MarketBin.getAllKnown();
         List<IMarketDescriptor> availableMarkets = locator.findAll(markets, true, true);
-
         if (availableMarkets != null && availableMarkets.size() > 0) {
             phAvailableMarkets.removeAllViews();
             for(IMarketDescriptor m: availableMarkets) {
@@ -47,6 +54,5 @@ public class FragmentMultiple extends Fragment {
                 phUnavailableMarkets.addView(tvName);
             }
         }
-        return v;
     }
 }

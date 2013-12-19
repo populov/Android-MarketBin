@@ -46,12 +46,12 @@ uploadArchives {
                 name 'MarketBin'
                 packaging 'jar'
                 description 'Paging indicator widgets compatible with the ViewPager from the Android Support Library and ActionBarSherlock.'
-                url 'http://github.com/Haunted-Soft/MarketBin'
+                url 'http://github.com/populov/MarketBin'
 
                 scm {
-                    url 'git@github.com:Haunted-Soft/MarketBin.git'
-                    connection 'git@github.com:Haunted-Soft/MarketBin.git'
-                    developerConnection 'git@github.com:Haunted-Soft/MarketBin.git'
+                    url 'git@github.com:populov/MarketBin.git'
+                    connection 'git@github.com:populov/MarketBin.git'
+                    developerConnection 'git@github.com:populov/MarketBin.git'
                 }
 
                 licenses {

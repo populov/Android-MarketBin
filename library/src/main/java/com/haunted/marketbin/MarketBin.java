@@ -12,6 +12,10 @@ public class MarketBin {
         return new MarketDescriptor("Google Play", "market://details?id=%s", "com.android.vending");
     }
 
+    public static MarketDescriptor getGooglePlayWeb() {
+        return new MarketDescriptor("Google Play WebSite", "https://play.google.com/store/apps/details?id=%s", null);
+    }
+
     public static MarketDescriptor getSamsungApps() {
         return new MarketDescriptor("Samsung Apps", "samsungapps://ProductDetail/%s", "com.sec.android.app.samsungapps");
     }
@@ -20,8 +24,8 @@ public class MarketBin {
         return new MarketDescriptor("SlideMe", "sam://details?id=%s", "com.slideme.sam.manager");
     }
 
-    public static MarketDescriptor getGooglePlayWeb() {
-        return new MarketDescriptor("Google Play WebSite", "https://play.google.com/store/apps/details?id=%s", null);
+    public static MarketDescriptor getYandexStore() {
+        return new MarketDescriptor("Yandex.Store", "market://details?id=%s", "com.yandex.store");
     }
 
     public static ArrayList<MarketDescriptor> getAllKnown() {
@@ -29,6 +33,7 @@ public class MarketBin {
         result.add(getSamsungApps());
         result.add(getSlideMe());
         result.add(getGooglePlay());
+        result.add(getYandexStore());
         result.add(getGooglePlayWeb());
         return result;
     }
