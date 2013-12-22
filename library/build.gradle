@@ -3,11 +3,12 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:0.6.+'
+        classpath 'com.android.tools.build:gradle:0.7.+'
     }
 }
 
 apply plugin: 'android-library'
+apply plugin: 'maven'
 
 repositories {
     mavenCentral()
@@ -34,19 +35,30 @@ dependencies {
     compile 'com.intellij:annotations:+@jar'
 }
 
-apply plugin: 'maven'
+// Publish to maven repository
 
-// Publish to maven local repository
+task sourcesJar(type: Jar) {
+    classifier 'sources'
+    from android.sourceSets.main.allSource
+}
+
+artifacts {
+    archives sourcesJar
+}
+
 uploadArchives {
     repositories {
         mavenDeployer {
-            repository(url: "file://$buildDir/mvnRepo/")
+            repository(url: "${bintray_api_base_url}/maven/${bintray_org}/${bintray_repo}/${bintray_package}") {
+                authentication(userName: bintray_username, password: bintray_api_key)
+            }
             pom.project {
                 artifactId 'MarketBin'
                 name 'MarketBin'
                 packaging 'jar'
                 description 'Paging indicator widgets compatible with the ViewPager from the Android Support Library and ActionBarSherlock.'
                 url 'http://github.com/populov/MarketBin'
+                inceptionYear 2013
 
                 scm {
                     url 'git@github.com:populov/MarketBin.git'
@@ -73,4 +85,3 @@ uploadArchives {
         }
     }
 }
-

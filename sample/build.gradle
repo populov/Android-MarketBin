@@ -1,12 +1,15 @@
 buildscript {
     repositories {
         mavenCentral()
+        maven { url 'http://dl.bintray.com/haunted-soft/maven' }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:0.6.+'
+        classpath 'com.android.tools.build:gradle:0.7.+'
+        classpath 'com.haunted.gradle-plugins:save-ssd:0.1.1@jar'
     }
 }
 apply plugin: 'android'
+apply plugin: 'save-ssd'
 
 repositories {
     mavenCentral()

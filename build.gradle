@@ -1,8 +1,8 @@
 task wrapper(type: Wrapper) {
-    gradleVersion = '1.8'
+    gradleVersion = '1.9'
 }
 
 allprojects {
     group = 'com.haunted.marketbin'
-    version = '0.1.2'
+    version = '0.1.3'
 }

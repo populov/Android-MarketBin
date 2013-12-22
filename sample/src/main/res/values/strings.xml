@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">MarketBin</string>
+    <string name="app_name">MarketBin Demo</string>
     <string name="title_section1">Single</string>
     <string name="title_section2">Multiple</string>
     <string name="title_section3">Credits</string>

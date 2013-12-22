@@ -29,7 +29,7 @@ public class MarketBin {
     }
 
     public static ArrayList<MarketDescriptor> getAllKnown() {
-        ArrayList<MarketDescriptor> result = new ArrayList<MarketDescriptor>(4);
+        ArrayList<MarketDescriptor> result = new ArrayList<MarketDescriptor>(5);
         result.add(getSamsungApps());
         result.add(getSlideMe());
         result.add(getGooglePlay());
