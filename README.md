@@ -66,11 +66,12 @@ The easyest way to use - you don't need to build project yourself, just add a fe
         maven { url "http://dl.bintray.com/haunted-soft/maven" }
     }
     ```
-2. add project depencency as usual
+2. Add project depencency as usual. You also should add to dependencies JetBrains annotations library, if you still don't use it.
 
     ```groovy
     dependencies {
         compile 'com.haunted.marketbin:MarketBin:+@aar'
+        compile 'org.jetbrains:annotations:+@jar'
         ...
     }
     ```
