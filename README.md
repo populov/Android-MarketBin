@@ -66,6 +66,7 @@ The easyest way to use - you don't need to build project yourself, just add a fe
         maven { url "http://dl.bintray.com/haunted-soft/maven" }
     }
     ```
+    
 2. Add project depencency as usual. You also should add to dependencies JetBrains annotations library, if you still don't use it.
 
     ```groovy
@@ -86,6 +87,7 @@ If you want to have latest version, that has not been published yet, or build fr
     cd MarketBin
     gradle build uploadArchives
     ```
+    
 2. Add mavenLocal repository in project repositories section (*don't mix it up with buildscript repositories, that usually goes first*)
 
     ```groovy
@@ -94,6 +96,7 @@ If you want to have latest version, that has not been published yet, or build fr
         mavenLocal()
     }
     ```
+    
 3. Add project dependency as usual (see above).
 
 Donations
