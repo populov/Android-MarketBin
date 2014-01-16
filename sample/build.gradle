@@ -9,7 +9,7 @@ buildscript {
     }
 }
 apply plugin: 'android'
-apply plugin: 'save-ssd'
+apply plugin: 'save-ssd' // README at https://github.com/populov/gradle-save-ssd-plugin
 
 repositories {
     mavenCentral()

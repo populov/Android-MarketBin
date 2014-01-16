@@ -56,7 +56,7 @@ uploadArchives {
                 artifactId 'MarketBin'
                 name 'MarketBin'
                 packaging 'jar'
-                description 'Paging indicator widgets compatible with the ViewPager from the Android Support Library and ActionBarSherlock.'
+                description 'Helps to detect which Android app stores are installed on device, and make links to your applications in those stores.'
                 url 'http://github.com/populov/Android-MarketBin'
                 inceptionYear 2013
 
