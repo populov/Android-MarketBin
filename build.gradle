@@ -4,5 +4,5 @@ task wrapper(type: Wrapper) {
 
 allprojects {
     group = 'com.haunted.marketbin'
-    version = '0.1.3'
+    version = '0.1.3.1'
 }

@@ -19,6 +19,8 @@ import com.haunted.marketbin.MarketDescriptor;
 import com.haunted.marketbin.MarketLocator;
 import com.haunted.marketbin.MarketUI;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.Arrays;
 
 public class FragmentCredits extends Fragment implements View.OnClickListener {
@@ -101,7 +103,7 @@ public class FragmentCredits extends Fragment implements View.OnClickListener {
     private static class AppDescriptor implements IMarketDescriptor {
         private final IMarketDescriptor marketDescriptor;
         private final String appName;
-        public AppDescriptor(IMarketDescriptor marketDescriptor, String appName) {
+        public AppDescriptor(@NotNull IMarketDescriptor marketDescriptor, String appName) {
             this.marketDescriptor = marketDescriptor;
             this.appName = appName;
         }
@@ -119,6 +121,11 @@ public class FragmentCredits extends Fragment implements View.OnClickListener {
         @Override
         public String getIntentFormat() {
             return marketDescriptor.getIntentFormat();
+        }
+
+        @Override
+        public String toString() {
+            return marketDescriptor.toString();
         }
     }
 }

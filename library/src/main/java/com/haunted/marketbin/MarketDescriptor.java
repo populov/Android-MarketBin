@@ -30,4 +30,9 @@ public class MarketDescriptor implements IMarketDescriptor {
     public String getIntentFormat() {
         return intentFormat;
     }
+
+    @Override
+    public String toString() {
+        return marketName + " - " + packageName;
+    }
 }
